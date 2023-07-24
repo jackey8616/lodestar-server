@@ -9,9 +9,10 @@ import { VideoService } from './video/video.service';
 import { VideoController } from './video/video.controller';
 import { MediaInfrastructure } from './media.infra';
 import { MediaService } from './media.service';
+import { MediaController } from './media.controller';
 
 @Module({
-  controllers: [VideoController],
+  controllers: [VideoController, MediaController],
   providers: [
     Logger,
     AudioService,
