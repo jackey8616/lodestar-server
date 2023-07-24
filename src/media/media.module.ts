@@ -8,6 +8,7 @@ import { ImageService } from './image/image.service';
 import { VideoService } from './video/video.service';
 import { VideoController } from './video/video.controller';
 import { MediaInfrastructure } from './media.infra';
+import { MediaService } from './media.service';
 
 @Module({
   controllers: [VideoController],
@@ -19,6 +20,8 @@ import { MediaInfrastructure } from './media.infra';
     ProgramService,
     UtilityService,
     VideoService,
+    MediaService,
   ],
+  exports: [MediaService],
 })
 export class MediaModule {}
